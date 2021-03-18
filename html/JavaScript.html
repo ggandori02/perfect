@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <a href="HOME.html"><img src="home.png" width="40" height="40"></a>
+    <h1>JavaScript</h1>
+    <div id="grid">
+      <div id="list">
+        <h3>
+          <ul>
+            <li><a href="HTML.html" title=HTML>HTML</a></li>
+            <li><a href="CSS.html" title=CSS>CSS</a></li>
+            <li><a href="JavaScript.html" title=JavaScript style="color:#ffcafb">Java Script</a></li>
+          </ul>
+        </h3>
+      </div>
+      <div id="content">
+        JavaScript는 html로 만들어진 문서를 사용자와 상호작용할 수 있게 만들어줌. <br>
+        브라우저 - 우클릭 - 검사 - element  (= 태그) <br><br>
+        <input type="button" value="다크모드" onclick="
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        ">
+        <input type="button" value="라이트모드" onclick="
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        ">
+        <xmp>
+          <input type="button" value="night" onclick="
+              document.querySelector('body').style.backgroundColor=black;  -> body 태그를 선택하는 코드: document.querySelector('body')
+              document.querySelector('body').style.color=white;
+          ">
+        </xmp><br>
+
+        * 자바스크립트의 시작을 알리는 코드 <br>
+        <xmp>
+          <script>
+            document.write(1+2);
+          </script>
+        </xmp>
+        <br>
+
+        * 버튼을 눌렀을 때 경고창이 뜨게?<br>
+          <input type="button" style="background-Color:red; color: white;" value="DANGER" onclick="
+            alert('누르지말라고')
+            ">
+        <xmp>
+          <input type="button" style="background-Color:red; color: white;"  value="DANGER" onclick="
+            alert('누르지말라고')
+          ">
+        </xmp>
+        <br><br>
+
+        * onclick="자바 스크립트 " <br>
+        - onclick 속성 값은 웹이 기억하고 있다가 "사용자가 클릭하면 그때 실행해야지."라고 대기하다가 클릭하면 실행 <br>
+        - 이벤트 (Event): 웹브라우저에서 일어나는 일. <br>
+        - 이벤트가 일어났을때 JS가 실행됨. 이 경우엔 '클릭'이 이벤트가 됨.<br>
+        <img src="event.png"> <br>
+
+        <a href="https://www.tutorialspoint.com/javascript/javascript_events.htm" target="_blank">더 많은 이벤트</a> <br><br>
+        *콘솔(console) <br>
+        -지금까진 자바스크립트를 위해 페이지를 만들었지 코드실행해야하는 가벼운 상황에서는 콘솔 사용하면 편함 <br>
+        - 브라우저 - 검사 - console <br>
+        - 문자의 개수? alert('~~~~~~~'.length) <br>
+        - 콘솔에서 실행시키는 자바스크립트는 내가 보고있는 웹페이지를 대상으로 실행 <br>
+        - 콘솔에서 실행했던 코드를 다시 입력하고 싶다면 복붙 해도 되지만 위쪽 방향키 ↑ 누르면 다시 나타남.
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <a href="HOME.html"><img src="home.png" width="40" height="40"></a>
+    <h1>CSS</h1>
+    <div id="grid">
+    <div id="list">
+    <h3>
+      <ul class="menu">
+        <li><a href="HTML.html" title=HTML>HTML</a></li>
+        <li><a href="CSS.html" title=CSS style="color:#ffcafb">CSS</a></li>
+        <li><a href="JavaScript.html" title=JavaScript>Java Script</a></li>
+      </ul>
+    </h3>
+    </div>
+    <div id="content">
+    CSS는 HTML과는 완전히 다른 언어. CSS를 쓰기위해서는 컴퓨터에게 "이걸 CSS로 해석해줘"라고 HTML 언어로 명령해야함.<br>
+    이 명령어가 <xmp> <style> ~~ </style> </xmp>
+    style 태그 안쪽에 있는 언어는 CSS.
+    <xmp>
+      <style>
+        a {
+          color: red;                 "이 웹페이지에 있는 모든 a 태그에 대해서 색을 빨간색으로 바꿔줘. "
+        }
+      </style>
+    </xmp>
+    가장 잘하기 위해서는 "중복의 제거" 가 중요!
+  * 웹페이지에 CSS를 포함하는 2가지 방법<br>
+  1. style 태그 이용<br>
+  2. 속성 'attribute'이용.<br>
+  <a href="https://blog.naver.com/mathesis_time/221684076038" target="_blank">CSS 속성 정리</a>
+   <xmp>ex) <a href="링크" style="color:red">  </xmp>
+
+  * 글씨에서 밑줄을 없애고 싶다?<br>
+  style 태그에서 ' text-decoration: none; '추가<br>
+  * CSS에서는 주석: /* */ (style태그 내에서)
+
+  * class 속성 추가<br>
+  class="1반"<br>
+  하지만 style 태그 내에서 1반{} 로 지정하면 변화 x.<br>
+  why? '1반{}'라고 쓰는건 이 웹페이지 내의 '1반''이라는 선택자를 지정하라는 것.<br>
+  class를 지정하기 위해서는 .1반 이라고써야됨<br>
+  class 안에는 여러가지 값이 들어갈 수 있고 띄어쓰기로 구분됨<br>
+  class="1반 2번"이라고 지정하고 -> style 태그에 .1반{} .2반{}으로 넣으면 뒤에서 지정된 2반 스타일로 적용. (좋은 방법은 아님)<br>
+  그래서 id 선택자 적용! * (전체) -> 태그 -> class -> ID 순서로 적용. (빌더허브에서 전체 -> 층별 -> 부재별 -> 강제랑 비슷.)<br>
+  class="1반" id="2번"<br>
+  id 지정할 때는 #id명 (id는 고유id. 중복 ID 불가. 썩쏘당당당당) <br>
+  <br><br>
+  * 박스모델<br>
+  box.html 생성<br>
+  이 태그의 박스 테두리를 보고싶다면?<br>
+  style에서 border-width:5px;  :테두리두께<br>
+  border-color:black;   테두리 색 <br>
+  border-style: solid;  테두리 선 종류 <br>
+  width: 박스 자체의 크기 <br>
+  화면 전체를 쓰는 태그: block level element(블록)<br>
+  자기 컨텐트 크기만큼 쓰는 태그: inline element <br><br>
+  * 화면 전체를 쓰는 태그를 인라인 태그로 바꾸고 싶다? <br>
+  style 에서 display: inline; 이런식으로 변경 가능. <br>
+  화면에서 태그를 안보이게 하고싶다면 display: none; <br> <br>
+  중복의 제거: <br>
+  h1, a{
+    border: 5px, solid, black; 순서 중요하지않음.
+  } <br><br>
+  컨텐츠와 박스 사이의 간격: padding <br>
+  박스와 박스 사이의 간격: margin <br>
+  <image src="box model.png">
+  border-bottom: 3px gray solid; <br><br><br>
+
+  *그리드 <br>
+  부모 태그로 묶어주면 편함.<br>
+  <xmp><div id="grid">
+    <div>A</div>
+    <div>B</div>
+  </div></xmp> <br>
+  * 그리드 사용하기 쓰기위해서는? <br>
+  스타일 태그에서 display:grid; <br>
+  'A','B' 두개를 그리드를 이용해서 배치하고 싶다면 부모 태그로 묶어줘야함 <br>
+  grid-template-columns: 150px, 1fr; : 앞에 'A'는 150px이라는 값을 고정적으로 가짐. 'B'는 비율.<br><br>
+  내가 이 태그나 기술을 사용해도 되는지 확인? caniuse.com <br><br>
+
+  *반응형 웹 <br>
+  - 미디어쿼리 <br>
+  - 화면이 일정크기 이하로 줄어들면 컨텐츠 안보이게?? <br>
+  스타일 태그에 @media(min-width: 800px)  :미디어쿼리이고, 화면의 최소 넓이가 800px이다. = 화면이 800px 이상일때 해당 스타일 적용. <br>
+  @media(min-width: 800px){<br>
+      div{<br>
+      display: none;<br>
+    }<br>
+  }<br><br>
+<a href="https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Media_queries" title="미디어쿼리">미디어쿼리 링크</a>
+  <br><br>
+  * 스타일 태그 중복의 제거
+  style 태그 제외한 순수한 스타일 코드만 새로운 파일로 생성. style.css <br>
+  style 파일 불러오기. <xmp> <link rel="stylesheet" href="style.css"></xmp>
+
+</div>
+</div>
+
+
+  </body>
+</html>

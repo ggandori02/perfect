@@ -1,0 +1,36 @@
+*{
+  font-family: "NanumSquare";
+  }
+  #list{
+    border-right: gray 3px dashed;
+  }
+  h1{
+    color: #40cbea;
+    text-align: center;
+    font-size: 50px;
+    font-family: "NanumSquare";
+    border-bottom: gray 3px solid;
+    margin:0;
+    padding-bottom: 20px;
+  }
+  #menu {
+     color: #d6bbff;
+   }
+  #content{
+     padding-left: 30px;
+     padding-top: 30px;
+   }
+   #grid{
+     display:grid;
+     grid-template-columns: 150px 1fr;
+   }
+   @media(max-width: 800px){
+     #grid{
+       display:block;
+             }
+
+    @font-face{
+        font-family: "NanumSquare";
+        src:url("NanumSquare.ttf") format("truetype");
+    }
+ }
